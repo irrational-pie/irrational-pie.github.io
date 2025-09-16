@@ -396,6 +396,50 @@ header .container, .page-hero .container {
 ::selection { background: #c4b5fd; color: #201a3a; }
 a { color: #6d28d9; }
 a:hover { color: #5b21b6; }
+/* ---- Left-align everything important ---- */
+nav .container { justify-content: flex-start !important; }
+
+header .container {
+  display: block !important;
+  text-align: left !important;
+}
+
+/* hero sizing: Name > About me */
+.hero-name {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin: 0 0 8px;
+  font-size: clamp(36px, 5vw, 56px);  /* larger than About me */
+}
+.hero-subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 500;
+  font-size: clamp(16px, 2.1vw, 20px);
+}
+
+/* profile column left-aligned (was centered earlier) */
+.profile {
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+.name, .subtitle {
+  text-align: left !important;
+  align-self: flex-start;
+}
+
+/* About-me heading in the content area */
+.section-title {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 12px;
+  font-size: clamp(22px, 2.6vw, 28px);  /* smaller than hero name */
+}
+
+/* ensure the first element in .content doesn't float down with big top margins */
+.content > :first-child { margin-top: 0 !important; }
 
 /* If you want the name ABOVE the avatar regardless of HTML order: */
 /* .name { order: 1; } */
