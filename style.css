@@ -473,6 +473,18 @@ header .container,
 .content { text-align: left !important; }
 .content > :first-child { margin-top: 0 !important; }
 
+
+/* Make avatar line up with the left-aligned profile text */
+.profile {
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+
+.avatar {
+  margin: 0 0 14px 0 !important;  /* remove the auto-centering */
+  align-self: flex-start !important;
+}
+
 /* If you want the name ABOVE the avatar regardless of HTML order: */
 /* .name { order: 1; } */
 /* .avatar { order: 2; } */
