@@ -24,7 +24,7 @@
   <header class="page-hero">
     <div class="container">
       <h1>Research</h1>
-      <p>Abstracts, papers, and links to code &amp; materials</p>
+      <p>Abstracts, papers, and links to materials</p>
     </div>
   </header>
 
@@ -32,7 +32,7 @@
     <div class="container">
 
       <!-- ===== 2025 ===== -->
-      <h2 class="year-heading" id="y2025">2025</h2>
+      <h2 class="year-heading" id="y2025">2023 - present</h2>
 
       <!-- Example publication card -->
       <article class="pub card" itemscope itemtype="https://schema.org/ScholarlyArticle">
@@ -42,11 +42,10 @@
           </span></a>
         </h3>
         <p class="pub-meta">
-          <span class="authors" itemprop="author">T. Giorgadze</span>
+          <span class="authors" itemprop="author">T. Giorgadze, S. Tavare</span>
           <span class="dot">•</span>
-          <span class="venue" itemprop="isPartOf">Preprint</span>
           <span class="dot">•</span>
-          <span class="year" itemprop="datePublished">2025</span>
+          <span class="year" itemprop="datePublished">2024 - </span>
         </p>
 
         <div class="badges">
@@ -59,21 +58,23 @@
           <summary>Abstract</summary>
           <p itemprop="description">
             We present a framework for robust copy-number state inference in single-cell sequencing.
-            The method combines probabilistic modeling with regularization across genomic segments
-            and accounts for coverage heterogeneity, enabling accurate detection of subclonal CNAs.
+            Explicit likelihoods for the process seem impossible to compute, so we
+propose to infer copy numbers using a random forest approach to Approximate
+Bayesian Computation. This approach scales to realistic numbers of cells, and its
+efficacy will be demonstrated by comparison to existing methods.
           </p>
         </details>
 
-        <div class="pub-links">
+   <!--     <div class="pub-links">
           <a class="btn" href="#" target="_blank" rel="noopener">Paper</a>
           <a class="btn ghost" href="#" target="_blank" rel="noopener">PDF</a>
           <a class="btn ghost" href="#" target="_blank" rel="noopener">Code</a>
           <a class="btn ghost" href="#" target="_blank" rel="noopener">BibTeX</a>
         </div>
-      </article>
+      </article> -->
 
       <!-- ===== 2023 ===== -->
-      <h2 class="year-heading" id="y2023">2023</h2>
+      <h2 class="year-heading" id="y2023">2021-2023</h2>
 
       <article class="pub card" itemscope itemtype="https://schema.org/ScholarlyArticle">
         <h3 class="pub-title">
@@ -82,29 +83,28 @@
           </span></a>
         </h3>
         <p class="pub-meta">
-          <span class="authors" itemprop="author">T. Giorgadze</span>
+          <span class="authors" itemprop="author">T. Giorgadze, H. Fischel, A. Tessier, K-A. Norton</span>
           <span class="dot">•</span>
-          <span class="venue" itemprop="isPartOf">Conference Proceedings</span>
           <span class="dot">•</span>
           <span class="year" itemprop="datePublished">2023</span>
         </p>
 
         <div class="badges">
-          <span class="badge">immunotherapy</span>
-          <span class="badge">agent-based models</span>
+          <span class="badge">CAR-T Cell Therapy</span>
+          <span class="badge">ABM</span>
+          <span class = "badge"> Tumor Heterogeneity</span>span>
         </div>
 
         <details class="abstract">
           <summary>Abstract</summary>
           <p itemprop="description">
-            We simulate tumor–immune dynamics under varying treatment schedules and parameter regimes,
-            showing conditions where combination therapy improves response while limiting toxicity.
+            Chimeric antigen receptor (CAR) T-cell therapy has shown much promise in liquid tumors but often fails in solid tumors. This work uses a computational model to examine under what conditions this therapy might fail or be successful. The model includes interactions between cancer cells, CAR T-cells (treatment), and vascular cells (that feed and support tumor growth). From our results, we determined specific tumor conditions in which CAR T-cell therapy is predicted to fail and suggest a combination treatment that might improve the efficacy of the treatment. Namely, we explore two forms of antigen expression in tumor cells: binary, and heterogeneous. 
           </p>
         </details>
 
         <div class="pub-links">
-          <a class="btn" href="#" target="_blank" rel="noopener">Paper</a>
-          <a class="btn ghost" href="#" target="_blank" rel="noopener">PDF</a>
+          <a class="btn" href="#" target="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EI9-75UAAAAJ&citation_for_view=EI9-75UAAAAJ:u5HHmVD_uO8C" rel="noopener">Paper - Binary expression</a>
+          <a class="btn" href="#" target="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=EI9-75UAAAAJ&citation_for_view=EI9-75UAAAAJ:u-x6o8ySG0sC" rel="noopener">Paper - Antigen Heterogeneity</a>
         </div>
       </article>
 
