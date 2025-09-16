@@ -149,7 +149,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
 
 /* Center the hero (big name at top) */
 header .container {
-  text-align: center;
+  text-align: left;
 }
 
 /* Center everything in the left profile column */
