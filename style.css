@@ -145,3 +145,32 @@ ul.clean { margin: 0; padding-left: 18px; }
    ======================= */
 ::selection { background: var(--accent-300); color: #0f172a; }
 hr { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
+
+
+/* Center the hero (big name at top) */
+header .container {
+  text-align: center;
+}
+
+/* Center everything in the left profile column */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers the name + avatar horizontally */
+  text-align: center;    /* centers text inside */
+}
+
+.name {
+  margin: 8px 0 6px;
+  text-align: center;    /* in case a global h2 rule was left-aligning it */
+}
+
+.avatar {
+  display: block;
+  margin: 0 auto;        /* ensures the image centers */
+}
+
+/* If you want the name ABOVE the avatar regardless of HTML order: */
+/* .name { order: 1; } */
+/* .avatar { order: 2; } */
+
