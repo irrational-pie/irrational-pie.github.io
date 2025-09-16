@@ -169,6 +169,24 @@ header .container {
   display: block;
   margin: 0 auto;        /* ensures the image centers */
 }
+/* center everything in the left profile column */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers children horizontally */
+  text-align: center;    /* centers text inside */
+}
+
+/* title + subtitle */
+.name { text-align: center; margin: 8px 0 4px; }
+
+.subtitle {
+  text-align: center;
+  align-self: center;    /* in case something overrides alignment */
+  margin: 2px 0 12px;
+  color: var(--muted);
+  font-weight: 500;
+}
 
 /* If you want the name ABOVE the avatar regardless of HTML order: */
 /* .name { order: 1; } */
