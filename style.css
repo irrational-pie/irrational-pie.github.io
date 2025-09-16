@@ -441,6 +441,38 @@ header .container {
 /* ensure the first element in .content doesn't float down with big top margins */
 .content > :first-child { margin-top: 0 !important; }
 
+
+/* inline hero now sits in the right column, left-aligned automatically */
+.hero-inline { margin: 0 0 14px; }
+.hero-name {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin: 0 0 6px;
+  font-size: clamp(36px, 5vw, 56px);
+}
+.hero-subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 500;
+  font-size: clamp(16px, 2.1vw, 20px);
+}
+
+/* About me smaller than name, snug above bio */
+.section-title {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 10px 0 10px;
+  font-size: clamp(22px, 2.6vw, 28px);
+}
+
+/* make sure earlier centering rules don’t fight this */
+header .container,
+.profile { text-align: left !important; align-items: flex-start !important; }
+.content { text-align: left !important; }
+.content > :first-child { margin-top: 0 !important; }
+
 /* If you want the name ABOVE the avatar regardless of HTML order: */
 /* .name { order: 1; } */
 /* .avatar { order: 2; } */
