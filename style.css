@@ -216,6 +216,79 @@ header .container {
 header .container h1 { margin: 0 0 8px; text-align: center; }
 header .container p  { margin: 0;        text-align: center; }
 
+
+/* ---------- Page hero ---------- */
+.page-hero {
+  padding: 40px 0 10px;
+  background: transparent;
+}
+.page-hero h1 {
+  margin: 0 0 6px;
+  font-size: clamp(28px, 4.5vw, 44px);
+  letter-spacing: -0.01em;
+}
+.page-hero p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* ---------- Readable typography block ---------- */
+.prose {
+  max-width: 900px;
+  margin: 18px auto 28px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+.prose h3 { margin-top: 18px; margin-bottom: 10px; }
+.prose p { margin: 0 0 16px; }
+
+/* ---------- Simple two-column grid ---------- */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 20px 0 30px;
+}
+@media (max-width: 900px) {
+  .grid-2 { grid-template-columns: 1fr; }
+}
+
+/* ---------- Cards (reuse if you already have .card) ---------- */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px 18px;
+  box-shadow: 0 6px 18px rgba(17,24,39,.04);
+}
+.card h3 { margin: 0 0 10px; font-size: 20px; }
+ul.clean { margin: 0; padding-left: 18px; }
+ul.clean li { margin: 6px 0; }
+
+/* ---------- Badges (for exams/topics) ---------- */
+.badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+.badge {
+  display: inline-block;
+  background: var(--accent-100);
+  color: var(--accent-700);
+  border: 1px solid var(--accent-300);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+/* ---------- Callout box ---------- */
+.callout {
+  margin: 24px 0 50px;
+  padding: 14px 16px;
+  border-left: 4px solid var(--accent-600);
+  background: #f5f3ff; /* light purple */
+  border-radius: 8px;
+}
+.callout p { margin: 0; }
+
 /* If you want the name ABOVE the avatar regardless of HTML order: */
 /* .name { order: 1; } */
 /* .avatar { order: 2; } */
