@@ -100,3 +100,16 @@
   .pub.card { padding: 16px; }
   .pub-links { gap: 8px; }
 }
+/* Hero background image (behind the title area only) */
+.page-hero {
+  position: relative;
+  overflow: hidden;                 /* trims any edges of the image */
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: url("abm.png") center / cover no-repeat;
+  opacity: 0.18;                    /* tweak 0.10–0.35 for stronger/softer */
+  z-index: -1;                      /* sits behind the text */
+}
