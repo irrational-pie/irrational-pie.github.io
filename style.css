@@ -187,6 +187,20 @@ header .container {
   color: var(--muted);
   font-weight: 500;
 }
+
+header .container {
+  text-align: center;
+}
+
+header .container h1 {
+  margin: 0 0 6px;
+}
+
+header .container p {
+  margin: 0;
+  color: var(--muted);     /* optional, from earlier palette */
+  font-weight: 500;        /* optional */
+}
 header .container h1,
 header .container p { text-align: center !important; }
 
