@@ -1,27 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tina Giorgadze</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Hi, I'm Tina Giorgadze!</h1>
-  </header>
 
+  <!-- Sticky top nav -->
   <nav>
-    <a href="index.html">Home</a>
-    <a href="teaching.html">Teaching</a>
-    <a href="contact.html">Contact</a>
-<a href="resume.pdf" target="_blank">Latest resume (PDF)</a>
+    <div class="container">
+      <a href="index.html">Home</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="contact.html">Contact</a>
+      <a href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+    </div>
   </nav>
 
-  <main>
-    <h2>About me:</h2>
-    <p> I'm a third-year Ph.D student at the Statistics Department at Columbia University. I earned my Bachelor of Arts in computer science and mathematics from Bard College. My current research focuses on inferring copy number states from single-cell sequencing data, while my past research explored the effectiveness of new cancer immunotherapy through agent-based models.</p>
-  </main>
-</body>
+  <!-- Simple hero -->
+  <header>
+    <div class="container">
+      <h1>Tina Giorgadze</h1>
+      <p>Ph.D. Student in Statistics · Columbia University</p>
+    </div>
+  </header>
 
+  <!-- Two-column main layout -->
+  <main>
+    <div class="container">
+      <div class="layout">
+        <!-- Left column (profile) -->
+        <aside class="profile">
+          <!-- Optional avatar: remove if you don't have an image yet -->
+          <!-- <img class="avatar" src="images/tina.jpg" alt="Tina Giorgadze"> -->
+          <h2 class="name">Tina Giorgadze</h2>
+          <p class="subtitle">Statistical Genomics & Computational Biology</p>
+          <ul class="orgs">
+            <li><a href="https://stat.columbia.edu/">Department of Statistics, Columbia</a></li>
+            <li><a href="#">B.A. Computer Science & Mathematics, Bard College</a></li>
+          </ul>
+          <div class="socials">
+            <a href="mailto:you@example.com" aria-label="Email">@</a>
+            <a href="https://github.com/yourusername" aria-label="GitHub">gh</a>
+            <a href="https://www.linkedin.com/in/yourprofile" aria-label="LinkedIn">in</a>
+          </div>
+        </aside>
+
+        <!-- Right column (content) -->
+        <section class="content">
+          <h2>About me</h2>
+          <p>I'm a third-year Ph.D student at the Statistics Department at Columbia University. I earned my Bachelor of Arts in computer science and mathematics from Bard College. My current research focuses on inferring copy number states from single-cell sequencing data, while my past research explored the effectiveness of new cancer immunotherapy through agent-based models.</p>
+
+          <div class="two-col">
+            <div class="card">
+              <h3>Interests</h3>
+              <ul class="clean">
+                <li>Statistical genomics</li>
+                <li>Single-cell sequencing</li>
+                <li>Computational biology</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Education</h3>
+              <p><strong>Ph.D. in Statistics</strong> — Columbia University</p>
+              <p><strong>B.A. in CS & Mathematics</strong> — Bard College</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+</body>
 </html>
+
