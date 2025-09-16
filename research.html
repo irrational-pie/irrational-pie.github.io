@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Research experience</title>
+  <!-- site-wide styles -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- page-specific styles -->
+  <link rel="stylesheet" href="research.css" />
+</head>
+<body>
+
+  <!-- same nav as other pages -->
+  <nav>
+    <div class="container">
+      <a href="index.html">Home</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="research.html" aria-current="page">Research</a>
+      <a href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <h1>Research</h1>
+      <p>Abstracts, papers, and links to code &amp; materials</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- ===== 2025 ===== -->
+      <h2 class="year-heading" id="y2025">2025</h2>
+
+      <!-- Example publication card -->
+      <article class="pub card" itemscope itemtype="https://schema.org/ScholarlyArticle">
+        <h3 class="pub-title">
+          <a href="#" itemprop="url"><span itemprop="name">
+            Inferring Copy Number States from Single-Cell Sequencing Data
+          </span></a>
+        </h3>
+        <p class="pub-meta">
+          <span class="authors" itemprop="author">T. Giorgadze</span>
+          <span class="dot">•</span>
+          <span class="venue" itemprop="isPartOf">Preprint</span>
+          <span class="dot">•</span>
+          <span class="year" itemprop="datePublished">2025</span>
+        </p>
+
+        <div class="badges">
+          <span class="badge">single-cell</span>
+          <span class="badge">copy number</span>
+          <span class="badge">statistical genomics</span>
+        </div>
+
+        <details class="abstract" open>
+          <summary>Abstract</summary>
+          <p itemprop="description">
+            We present a framework for robust copy-number state inference in single-cell sequencing.
+            The method combines probabilistic modeling with regularization across genomic segments
+            and accounts for coverage heterogeneity, enabling accurate detection of subclonal CNAs.
+          </p>
+        </details>
+
+        <div class="pub-links">
+          <a class="btn" href="#" target="_blank" rel="noopener">Paper</a>
+          <a class="btn ghost" href="#" target="_blank" rel="noopener">PDF</a>
+          <a class="btn ghost" href="#" target="_blank" rel="noopener">Code</a>
+          <a class="btn ghost" href="#" target="_blank" rel="noopener">BibTeX</a>
+        </div>
+      </article>
+
+      <!-- ===== 2023 ===== -->
+      <h2 class="year-heading" id="y2023">2023</h2>
+
+      <article class="pub card" itemscope itemtype="https://schema.org/ScholarlyArticle">
+        <h3 class="pub-title">
+          <a href="#" itemprop="url"><span itemprop="name">
+            Agent-Based Modeling of Immunotherapy Effectiveness
+          </span></a>
+        </h3>
+        <p class="pub-meta">
+          <span class="authors" itemprop="author">T. Giorgadze</span>
+          <span class="dot">•</span>
+          <span class="venue" itemprop="isPartOf">Conference Proceedings</span>
+          <span class="dot">•</span>
+          <span class="year" itemprop="datePublished">2023</span>
+        </p>
+
+        <div class="badges">
+          <span class="badge">immunotherapy</span>
+          <span class="badge">agent-based models</span>
+        </div>
+
+        <details class="abstract">
+          <summary>Abstract</summary>
+          <p itemprop="description">
+            We simulate tumor–immune dynamics under varying treatment schedules and parameter regimes,
+            showing conditions where combination therapy improves response while limiting toxicity.
+          </p>
+        </details>
+
+        <div class="pub-links">
+          <a class="btn" href="#" target="_blank" rel="noopener">Paper</a>
+          <a class="btn ghost" href="#" target="_blank" rel="noopener">PDF</a>
+        </div>
+      </article>
+
+      <!-- add more year headings + .pub articles as needed -->
+
+    </div>
+  </main>
+
+</body>
+</html>
