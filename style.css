@@ -1,22 +1,147 @@
-/* --- debug: force nav visible --- */
+/* =======================
+   Base + Palette
+   ======================= */
+:root{
+  --bg: #f8fafc;             /* page background */
+  --surface: #ffffff;         /* cards/nav */
+  --text: #1f2937;            /* main text */
+  --muted: #6b7280;           /* secondary text */
+  --border: #e5e7eb;          /* subtle lines */
+
+  /* purple accents */
+  --accent-100:#ede9fe;
+  --accent-300:#c4b5fd;
+  --accent-500:#8b5cf6;
+  --accent-600:#7c3aed;       /* main accent */
+  --accent-700:#6d28d9;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font: 16px/1.75 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img { max-width: 100%; display: block; border: 0; }
+a { color: var(--accent-600); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+/* =======================
+   Top Navigation (sticky)
+   ======================= */
 nav {
-  all: revert;                 /* undo aggressive resets */
-  display: flex !important;
-  gap: 1rem !important;
-  padding: 0.75rem 1rem !important;
-  background: #ffffff !important;
-  border-bottom: 1px solid #e5e7eb !important;
-  position: sticky !important;
-  top: 0 !important;
-  z-index: 1000 !important;
+  position: sticky; top: 0; z-index: 50;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: saturate(140%) blur(4px);
+}
+nav .container {
+  display: flex; align-items: center; justify-content: center;
+  gap: 24px; padding: 14px 8px;
 }
 nav a {
-  all: unset;                  /* strip weird inherited styles */
-  display: inline-block !important;
-  color: #111 !important;
-  font-weight: 600 !important;
-  text-decoration: none !important;
-  cursor: pointer !important;
-  padding: 0.25rem 0 !important;
+  color: #111827;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 8px;
 }
-nav a:hover { text-decoration: underline !important; }
+nav a:hover { background: #f3f4f6; text-decoration: none; }
+
+/* optional right-side icons area (add a div.nav-actions if you want) */
+.nav-actions { margin-left: auto; display: flex; gap: 16px; color: var(--muted); }
+.nav-actions a { color: inherit; }
+
+/* =======================
+   Hero / Title (simple)
+   ======================= */
+header { background: transparent; }
+header .container { padding: 36px 24px 0; }
+header h1 {
+  margin: 0 0 8px;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+header p { margin: 0; color: var(--muted); }
+
+/* =======================
+   Main two-column layout
+   put this inside <main><div class="container"><div class="layout">...</div></div>
+   left column: .profile   right: .content
+   ======================= */
+.layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 48px;
+  padding: 32px 24px 64px;
+  background: transparent;
+}
+@media (max-width: 900px){
+  .layout { grid-template-columns: 1fr; gap: 28px; }
+}
+
+/* ------- Left column (profile card) ------- */
+.profile {
+  text-align: center;
+}
+.avatar {
+  width: 200px; height: 200px; margin: 0 auto 18px;
+  border-radius: 999px; object-fit: cover;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+.name {
+  margin: 0; font-size: 32px; font-weight: 800; letter-spacing: -0.01em;
+}
+.subtitle {
+  margin: 6px 0 14px; color: var(--muted); font-weight: 500;
+}
+.orgs { list-style: none; padding: 0; margin: 14px 0 18px; }
+.orgs li { margin: 6px 0; }
+.orgs a { color: var(--accent-600); }
+.orgs a:hover { color: var(--accent-700); }
+
+/* socials row under the org links (use <div class="socials"><a>…</a></div>) */
+.socials { display: flex; justify-content: center; gap: 16px; margin-top: 10px; }
+.socials a {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 999px;
+  background: var(--accent-100); color: var(--accent-600);
+}
+.socials a:hover { background: var(--accent-300); color: var(--accent-700); }
+
+/* ------- Right column (content) ------- */
+.content h2 {
+  font-size: clamp(28px, 3.6vw, 44px);
+  margin: 0 0 10px;
+  letter-spacing: -0.01em;
+}
+.content p { margin: 0 0 16px; }
+.content a { color: var(--accent-600); }
+.content a:hover { color: var(--accent-700); }
+
+/* two small columns like "Interests" & "Education" */
+.two-col {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 28px;
+}
+@media (max-width: 700px){ .two-col { grid-template-columns: 1fr; } }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px 18px;
+  box-shadow: 0 6px 18px rgba(17,24,39,.04);
+}
+.card h3 { margin: 0 0 10px; font-size: 20px; }
+ul.clean { margin: 0; padding-left: 18px; }
+
+/* =======================
+   Nice little details
+   ======================= */
+::selection { background: var(--accent-300); color: #0f172a; }
+hr { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
