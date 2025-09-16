@@ -1,19 +1,24 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #fafafa;
+  color: #333;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
 }
+
 header {
-  background: #333;
+  background: linear-gradient(135deg, #4A90E2, #9013FE);
   color: white;
-  padding: 2rem;
   text-align: center;
+  padding: 3rem 1rem;
 }
-main {
-  padding: 1rem 2rem;
+
+nav a {
+  margin: 0 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
-h2 {
-  color: #333;
-  margin-top: 2rem;
+nav a:hover {
+  text-decoration: underline;
 }
