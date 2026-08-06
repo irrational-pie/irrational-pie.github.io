@@ -1,115 +1,127 @@
-/* Uses the same variables from style.css. Adds page-specific styles. */
-:root{
-  /* fallbacks in case style.css variables are missing */
-  --accent-100: #ede9fe;
-  --accent-300: #c4b5fd;
-  --accent-600: #7c3aed;
-  --accent-700: #6d28d9;
-  --surface: #fff;
-  --border: #e5e7eb;
-  --muted: #6b7280;
-  --text: #1f2937;
+/* Research-specific structure; shared color variables live in style.css. */
+
+body:has(.page-hero h1)::before {
+  background:
+    linear-gradient(115deg, rgba(255, 255, 255, .62), transparent 34%),
+    repeating-linear-gradient(0deg, rgba(31, 41, 55, .018), rgba(31, 41, 55, .018) 1px, transparent 1px, transparent 5px);
 }
 
-/* Page hero tweaks for Research */
-.page-hero { padding: 44px 0 8px; }
-.page-hero h1 { margin: 0 0 6px; }
-.page-hero p  { margin: 0; color: var(--muted); font-weight: 500; }
-
-/* Year divider */
-.year-heading {
-  margin: 26px 0 12px;
-  padding-top: 12px;
-  border-top: 1px solid var(--border);
-  font-size: 22px;
-  letter-spacing: -0.01em;
-}
-
-/* Publication card */
-.pub.card { padding: 18px; margin-bottom: 16px; }
-.pub-title {
-  margin: 0 0 6px;
-  font-size: 20px;
-  line-height: 1.35;
-}
-.pub-title a { color: #0f172a; text-decoration: none; }
-.pub-title a:hover { color: var(--accent-700); text-decoration: underline; }
-
-.pub-meta {
-  margin: 0 0 8px;
-  color: var(--muted);
-  font-size: 0.98rem;
-}
-.pub-meta .dot { margin: 0 8px; opacity: .6; }
-
-/* Badges (reuse site style, with slight spacing) */
-.badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 6px; }
-.badge {
-  display: inline-block;
-  background: var(--accent-100);
-  color: var(--accent-700);
-  border: 1px solid var(--accent-300);
-  padding: 4px 10px;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-/* Abstract accordion */
-.abstract { margin-top: 8px; }
-.abstract > summary {
-  cursor: pointer;
-  font-weight: 600;
-  color: var(--accent-700);
-  list-style: none;      /* remove default disclosure triangle on Safari */
-}
-.abstract > summary::-webkit-details-marker { display: none; } /* Chrome/Safari marker */
-.abstract[open] > summary { color: var(--accent-600); }
-.abstract p { margin: 8px 0 0; }
-
-/* Links row */
-.pub-links {
-  display: flex; flex-wrap: wrap; gap: 10px;
-  margin-top: 12px;
-}
-.btn {
-  display: inline-block;
-  background: var(--accent-600);
-  color: #fff;
-  border: 1px solid var(--accent-600);
-  padding: 6px 12px;
-  border-radius: 10px;
-  font-weight: 600;
-  text-decoration: none;
-}
-.btn:hover { background: var(--accent-700); border-color: var(--accent-700); }
-
-.btn.ghost {
-  background: transparent;
-  color: var(--accent-700);
-  border-color: var(--accent-300);
-}
-.btn.ghost:hover {
-  background: var(--accent-100);
-  border-color: var(--accent-600);
-  color: var(--accent-700);
-}
-
-/* Small screens */
-@media (max-width: 640px){
-  .pub.card { padding: 16px; }
-  .pub-links { gap: 8px; }
-}
-/* Hero background image (behind the title area only) */
 .page-hero {
-  position: relative;
-  overflow: hidden;                 /* trims any edges of the image */
+  background:
+    linear-gradient(90deg, rgba(255, 253, 248, .96) 0%, rgba(255, 253, 248, .84) 45%, rgba(255, 253, 248, .34) 100%),
+    url("abm.png") center 42% / cover no-repeat,
+    var(--paper);
 }
 
 .page-hero::before {
   content: "";
-  position: absolute; inset: 0;
-  background: url("abm.png") center / cover no-repeat;
-  opacity: 0.18;                    /* tweak 0.10–0.35 for stronger/softer */
-  z-index: -1;                      /* sits behind the text */
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 253, 248, .18), rgba(255, 253, 248, .42)),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, .12), rgba(255, 255, 255, .12) 1px, transparent 1px, transparent 6px);
+  pointer-events: none;
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.year-heading {
+  margin: 38px 0 16px;
+  padding-top: 14px;
+  color: var(--ink);
+  border-top: 1px solid var(--rule);
+  font-size: clamp(1.35rem, 2.6vw, 2rem);
+}
+
+.pub.card {
+  margin-bottom: 18px;
+  padding-block: clamp(22px, 3vw, 30px);
+}
+
+.pub.card::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  bottom: 22px;
+  left: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--accent-300), rgba(196, 181, 253, 0));
+}
+
+.pub-title {
+  margin: 0 0 8px;
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+  line-height: 1.2;
+}
+
+.pub-title a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.pub-title a:hover {
+  color: var(--accent-700);
+  text-decoration: underline;
+}
+
+.pub-meta {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-family: ui-sans-serif, "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: .94rem;
+  font-weight: 600;
+}
+
+.pub-meta .dot {
+  margin: 0 8px;
+  opacity: .55;
+}
+
+.abstract {
+  margin-top: 14px;
+}
+
+.abstract > summary {
+  display: inline-block;
+  cursor: pointer;
+  color: var(--accent-700);
+  font: 700 .92rem/1.1 ui-sans-serif, "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  list-style: none;
+  border-bottom: 1px solid rgba(124, 58, 237, .28);
+}
+
+.abstract > summary::-webkit-details-marker {
+  display: none;
+}
+
+.abstract[open] > summary {
+  color: var(--accent-600);
+}
+
+.abstract p {
+  margin: 10px 0 0;
+}
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+@media (max-width: 640px) {
+  .pub.card {
+    padding-left: 18px;
+  }
+
+  .pub-meta .dot {
+    display: none;
+  }
+
+  .pub-meta span {
+    display: block;
+  }
 }
