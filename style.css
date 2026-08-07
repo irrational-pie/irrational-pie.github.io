@@ -331,6 +331,11 @@ main > .container > .card + .card {
   font-size: clamp(1.25rem, 2.2vw, 1.55rem);
 }
 
+.card p {
+  font-size: .88rem;
+  line-height: 1.54;
+}
+
 ul.clean {
   margin: 0;
   padding-left: 1.15rem;
@@ -339,6 +344,7 @@ ul.clean {
 ul.clean li {
   margin: .42rem 0;
   padding-left: .1rem;
+  font-size: .9rem;
 }
 
 .prose {
